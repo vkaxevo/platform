@@ -364,4 +364,12 @@ module.exports = {
 
     return configFile;
   },
+  '0.23.0-dev.8': (configFile) => {
+    Object.entries(configFile.configs)
+      .forEach(([, config]) => {
+        config.core.reindex = 0;
+      });
+
+    return configFile;
+  },
 };
